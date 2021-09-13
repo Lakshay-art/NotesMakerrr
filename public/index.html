@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <meta http-equiv="refresh" content="60"/> -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+   
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.js"></script> -->
+    <title>React App</title>
+  </head>
+  <body id="body">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+   
+   <nav class="navbar navbar-expand-sm bg-dark navbar-dark py-4 " >
+  
+    <a class="navbar-brand" href="#">
+    <img src="minion two.png" alt="Logo" style="width:40px;align:top">
+    </a>
+  
+
+    <a class="navbar-brand mx-auto" href="#" style="font-size:40px">  NOTES MAKER</a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+	<a href="#goto"> <button type="button-link" class="btn btn-secondary rounded-pill" style="border:2px solid #4183BB">  &nbsp &nbsp &nbsp All Notes &nbsp &nbsp &nbsp  </button></a>
+	  <button id="ff" type="button" class="btn btn-secondary btn-sm ml-auto">
+          <span  class="glyphicon glyphicon-user "></span>
+        </button>
+        
+    </div>
+</nav>
+
+<script>
+
+</script>
+
+
+
+<script>
+
+  // var blurred=false;
+  // window.onblur=function(){blurred=true;}
+  // window.onfocus=function(){blurred &&(location.reload());}
+
+  var _lsTotal = 0,
+    _xLen, _x;
+for (_x in localStorage) {
+    if (!localStorage.hasOwnProperty(_x)) {
+        continue;
+    }
+    _xLen = ((localStorage[_x].length + _x.length) * 2);
+    _lsTotal += _xLen;
+    console.log(_x.substr(0, 50) + " = " + (_xLen / 1024).toFixed(2) + " KB")
+};
+console.log("Total = " + (_lsTotal / 1024).toFixed(2) + " KB");
+
+var myWindow;
+function popupCente(url, title, w, h) {
+	var left = (window.width/2)-(w/2);
+	var top = (window.height/2)-(h/2);
+    window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no,  copyhistory=no, width='+w+', height='+h+', top='+0+', left=0');
+
+};
+
+
+
+function popupCenter(url, title, w, h) {
+var left = (window.width/2)-(w/2);
+var top = 0;
+myWindow=window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no , toolbar=no, scrollbars=no,  copyhistory=no, width='+w+', height='+h+', top='+top+', left=0');
+myWindow.moveTo(0,515);
+}
+
+
+</script>
+
+<div class="jumbotron jumbotron-fluid" style="align:center;padding:0px ;border-radius:40px;width:60%;z-index:100;opacity:100%; 
+      position:relative;
+       left:20%;
+	   
+      
+	">
+  <div class="container">
+    <h1  style="text-align:center"><a onclick="popupCenter('http://localhost:3000/', 'myPop',1500,165);popupCente('http://www.google.com', 'myPop1',1500,465); "  href="javascript:void(0);" style="text-align:center" >OPEN BROWSER</a></h1>
+    <p class="lead"></p>
+  </div>
+</div>
+
+
+
+
+   
+   
+<script>
+$('#ff').click(function(){
+ if ($('.Slider2').width()>0){
+            $('.Slider2').animate({width: '0px'}, 500);}
+else
+ $('#root .Slider2').animate({width: 300}, 700);});
+</script> 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   <div id="root"></div>
+  </body>
+</html>
