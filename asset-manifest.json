@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Notes-maker/static/css/main.a937f2b7.chunk.css",
-    "main.js": "/Notes-maker/static/js/main.a2636a3b.chunk.js",
-    "main.js.map": "/Notes-maker/static/js/main.a2636a3b.chunk.js.map",
-    "runtime-main.js": "/Notes-maker/static/js/runtime-main.5a03a06a.js",
-    "runtime-main.js.map": "/Notes-maker/static/js/runtime-main.5a03a06a.js.map",
-    "static/js/2.df4cca70.chunk.js": "/Notes-maker/static/js/2.df4cca70.chunk.js",
-    "static/js/2.df4cca70.chunk.js.map": "/Notes-maker/static/js/2.df4cca70.chunk.js.map",
-    "static/js/3.4742dd19.chunk.js": "/Notes-maker/static/js/3.4742dd19.chunk.js",
-    "static/js/3.4742dd19.chunk.js.map": "/Notes-maker/static/js/3.4742dd19.chunk.js.map",
-    "index.html": "/Notes-maker/index.html",
-    "static/css/main.a937f2b7.chunk.css.map": "/Notes-maker/static/css/main.a937f2b7.chunk.css.map",
-    "static/js/2.df4cca70.chunk.js.LICENSE.txt": "/Notes-maker/static/js/2.df4cca70.chunk.js.LICENSE.txt"
+    "main.css": "/NotesMakerrr/index.html/static/css/main.a937f2b7.chunk.css",
+    "main.js": "/NotesMakerrr/index.html/static/js/main.a2636a3b.chunk.js",
+    "main.js.map": "/NotesMakerrr/index.html/static/js/main.a2636a3b.chunk.js.map",
+    "runtime-main.js": "/NotesMakerrr/index.html/static/js/runtime-main.ad34dd02.js",
+    "runtime-main.js.map": "/NotesMakerrr/index.html/static/js/runtime-main.ad34dd02.js.map",
+    "static/js/2.df4cca70.chunk.js": "/NotesMakerrr/index.html/static/js/2.df4cca70.chunk.js",
+    "static/js/2.df4cca70.chunk.js.map": "/NotesMakerrr/index.html/static/js/2.df4cca70.chunk.js.map",
+    "static/js/3.4742dd19.chunk.js": "/NotesMakerrr/index.html/static/js/3.4742dd19.chunk.js",
+    "static/js/3.4742dd19.chunk.js.map": "/NotesMakerrr/index.html/static/js/3.4742dd19.chunk.js.map",
+    "index.html": "/NotesMakerrr/index.html/index.html",
+    "static/css/main.a937f2b7.chunk.css.map": "/NotesMakerrr/index.html/static/css/main.a937f2b7.chunk.css.map",
+    "static/js/2.df4cca70.chunk.js.LICENSE.txt": "/NotesMakerrr/index.html/static/js/2.df4cca70.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5a03a06a.js",
+    "static/js/runtime-main.ad34dd02.js",
     "static/js/2.df4cca70.chunk.js",
     "static/css/main.a937f2b7.chunk.css",
     "static/js/main.a2636a3b.chunk.js"
