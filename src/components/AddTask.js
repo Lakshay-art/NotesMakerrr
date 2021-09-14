@@ -162,7 +162,7 @@ useEffect(()=>{
 							<Form.Control  as="textarea" id="autoheight" placeholder="Description Here" name="description" htmlFor="addTask" value={note1.description} onChange={InputEvent} rows={autoheight} style={{ margin: "0px", borderRadius: "25px",maxHeight:"200px" }} />
 						</Col>
 						<Col xs={2} style={{ paddingLeft: "1px", paddingRight: "1px" }}>
-							<Form.Control id="imgf" as="textarea"  placeholder="Image URL" name="img" value={note1.img} onChange={InputEvent} onFocus={RemoveImg} rows={autoheight} style={{ margin: "0px", borderRadius: "25px",maxHeight:"200px" }} />
+							<Form.Control id="imgf" as="textarea"  placeholder="Image URL" name="img" value={note1.img} onChange={InputEvent} onFocus={RemoveImg} rows={autoheight} style={{ margin: "0px", borderRadius: "25px",maxHeight:"200px",minWidth:"65px" }} />
 						</Col>
 						<Col xs={2}><Button onClick={X} style={{ borderRadius: "35px" }} >Save</Button>
 							<Button onClick={X2} onDoubleClick={X3} style={{ borderRadius: "35px" }} variant="secondary">Reset</Button>{''}

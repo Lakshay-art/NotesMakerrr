@@ -123,7 +123,7 @@ useEffect(()=>{
         return (
         
          // style={{padding:'5px'}} className m5
-		<div className="m-5 " style={{}} >    
+		<div className="m-5 p-2 " style={{}} >    
         <Card key={props.notek.id} className={`m-2 border-0 shadow ${props.new} halfb`} id=""  style={{ 
           //backgroundColor: '#ffffff',
     borderRadius: 45,

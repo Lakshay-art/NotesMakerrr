@@ -126,7 +126,7 @@ const setdeletednote = (deletednote)=>{
 	    <Button className='bg-light text-primary border-primary shadow-sm' style={{borderRadius:'25px', outline: "none" }} >threeorfour</Button>
                </div>  */}
 			   
-		<Jumbotron id="searchj" style={{ width:"30%", padding: "4px", margin: "auto",marginBottom:"20px", borderRadius: "30px", position: "relative", zIndex: "101" }}>
+		<Jumbotron id="searchj" style={{ width:"30%", padding: "4px", margin: "auto",marginBottom:"20px", borderRadius: "30px", position: "relative", zIndex: "1",minWidth:"150px" }}>
 			<Form inline className='w-50 mx-auto' >
 				<FormControl id="searchf" type='text' placeholder='search..' href="#" className='w-100 ' style={{ borderRadius: "25px" }} onChange={(e) => setSearchTerm(e.target.value)}></FormControl>
 				<Button type='submit' className='invisible'></Button>

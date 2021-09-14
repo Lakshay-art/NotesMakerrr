@@ -49,25 +49,23 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     
    
-   <nav class="navbar navbar-expand-sm bg-dark navbar-dark py-4 " >
+   <nav class="navbar bg-dark navbar-dark py-4 " >
   
-    <a class="navbar-brand" href="#">
-    <img src="minion two.png" alt="Logo" style="width:40px;align:top">
+    <!-- <a class="navbar-brand" href="#">
+    <img src="minion two.png" alt="Logo" style="width:40px;">
     </a>
-  
+   -->
 
     <a class="navbar-brand mx-auto" href="#" style="font-size:40px">  NOTES MAKER</a>
     
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-	<a href="#goto"> <button type="button-link" class="btn btn-secondary rounded-pill" style="border:2px solid #4183BB">  &nbsp &nbsp &nbsp All Notes &nbsp &nbsp &nbsp  </button></a>
+
+    <div class="navflexj">
+	<a href="#goto"> <button type="button-link" class="btn btn-secondary rounded-pill" style="border:2px solid #4183BB; padding:5px 25px 5px 25px;"> All Notes </button></a>
 	  <button id="ff" type="button" class="btn btn-secondary btn-sm ml-auto">
           <span  class="glyphicon glyphicon-user "></span>
         </button>
         
-    </div>
+   </div>
 </nav>
 
 <script>
@@ -78,9 +76,9 @@
 
 <script>
 
-  // var blurred=false;
-  // window.onblur=function(){blurred=true;}
-  // window.onfocus=function(){blurred &&(location.reload());}
+  var blurred=false;
+  window.onblur=function(){blurred=true;}
+  window.onfocus=function(){blurred &&(location.reload());}
 
   var _lsTotal = 0,
     _xLen, _x;
@@ -114,14 +112,14 @@ myWindow.moveTo(0,515);
 
 </script>
 
-<div class="jumbotron jumbotron-fluid" style="align:center;padding:0px ;border-radius:40px;width:60%;z-index:100;opacity:100%; 
+<div class="jumbotron jumbotron-fluid" style="align:center;padding:0px ;border-radius:40px;width:65%;z-index:100;opacity:100%; 
       position:relative;
        left:20%;
 	   
       
 	">
   <div class="container">
-    <h1  style="text-align:center"><a onclick="popupCenter('http://localhost:3000/', 'myPop',1500,165);popupCente('http://www.google.com', 'myPop1',1500,465); "  href="javascript:void(0);" style="text-align:center" >OPEN BROWSER</a></h1>
+    <h1  style="text-align:center"><a onclick="popupCenter('https://lakshay-art.github.io/NotesMakerrr/', 'myPop',1500,165);popupCente('http://www.google.com', 'myPop1',1500,465); "  href="javascript:void(0);" style="text-align:center" >OPEN BROWSER</a></h1>
     <p class="lead"></p>
   </div>
 </div>
