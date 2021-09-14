@@ -1,6 +1,6 @@
 import { Form, Jumbotron, Button, Row, Col, Container } from 'react-bootstrap';
 import $ from 'jquery';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 
@@ -55,10 +55,25 @@ const [counter,countit]=useState(JSON.parse(localStorage.getItem("count"))||0);
 		setNote({
 			title: "",
 			description: "",
-			img: "3.png",
+			img: "",
             c :note1.c,
 		});
 	}
+useEffect(()=>{
+	var currnote=JSON.parse(localStorage.getItem("current"))
+	setNote({
+			title: props.premade.title||currnote.title||"",
+			description: props.premade.description||currnote.description||"",
+			img: props.premade.img||currnote.img||`${counter}.png`,
+            c :props.premade.c||"",
+		});
+},[props.premade])
+	// const editingnotes = (premadenote)=>{
+    useEffect(()=>{
+    localStorage.setItem("current",JSON.stringify(note1))
+	},[note1])
+		
+	// }
 	const X3 = () => {
 		$('.n1 #m2').toggle();
 
@@ -68,7 +83,7 @@ const [counter,countit]=useState(JSON.parse(localStorage.getItem("count"))||0);
 		setNote({
 			title: "",
 			description: "",
-			img: "2.png",
+			img: "",
 			c :note1.c,
 
 		});
@@ -130,24 +145,24 @@ const [counter,countit]=useState(JSON.parse(localStorage.getItem("count"))||0);
 	return (
 		<>
 
-			<Container id="m2" style={{
+			<Container id="m2" className="backdrop" style={{
 				display: "none", marginBottom: "0px", paddingLeft: "10px", paddingTop: "5px", paddingBottom: "0px", paddingRight: "2px", width: "90%", zIndex: "100", opacity: "100%",
 				position: "fixed",
 				bottom: "0",
-				left: "0%", right: '2%', backdropFilter: "blur(4px) brightness(0.9)", borderRadius: "45px"
+				left: "0%", right: '2%', borderRadius: "45px"
 			}}>
 				<Form id="addTask" style={{ padding: "2px" }}>
 					<Row>
 
 						<Col xs={3} style={{ paddingLeft: "15px", paddingRight: "1px" }}>
 
-							<Form.Control as="textarea"  placeholder="Title Here" name="title" value={note1.title} onChange={InputEvent} rows={autoheight} style={{ margin: "0px", borderRadius: "25px",height:"auto",minHeight:"70px",maxHeight:"200px" }} />
+							<Form.Control id="titlef" as="textarea"  placeholder="Title Here" name="title" value={note1.title} onChange={InputEvent} rows={autoheight} style={{ margin: "0px", borderRadius: "25px",height:"auto",minHeight:"70px",maxHeight:"200px" }} />
 						</Col>
 						<Col xs={4} style={{ paddingLeft: "1px", paddingRight: "1px" }} >
-							<Form.Control as="textarea" id="autoheight" placeholder="Description Here" name="description" htmlFor="addTask" value={note1.description} onChange={InputEvent} rows={autoheight} style={{ margin: "0px", borderRadius: "25px",maxHeight:"200px" }} />
+							<Form.Control  as="textarea" id="autoheight" placeholder="Description Here" name="description" htmlFor="addTask" value={note1.description} onChange={InputEvent} rows={autoheight} style={{ margin: "0px", borderRadius: "25px",maxHeight:"200px" }} />
 						</Col>
 						<Col xs={2} style={{ paddingLeft: "1px", paddingRight: "1px" }}>
-							<Form.Control as="textarea"  placeholder="Image URL" name="img" value={note1.img} onChange={InputEvent} onFocus={RemoveImg} rows={autoheight} style={{ margin: "0px", borderRadius: "25px",maxHeight:"200px" }} />
+							<Form.Control id="imgf" as="textarea"  placeholder="Image URL" name="img" value={note1.img} onChange={InputEvent} onFocus={RemoveImg} rows={autoheight} style={{ margin: "0px", borderRadius: "25px",maxHeight:"200px" }} />
 						</Col>
 						<Col xs={2}><Button onClick={X} style={{ borderRadius: "35px" }} >Save</Button>
 							<Button onClick={X2} onDoubleClick={X3} style={{ borderRadius: "35px" }} variant="secondary">Reset</Button>{''}

@@ -2,26 +2,45 @@ import React, { useState,useEffect } from 'react';
 import { Button,Card, Row, Col } from 'react-bootstrap';
 //import axios from 'axios'
 
+var deleted=[]
 
 
 const Note2=(props)=>{
 
-  
+   
 	const deleteNote=(id)=> {
+    var localdel=JSON.parse(localStorage.getItem("del"))
+    //deleted.push(JSON.parse(localStorage.getItem("del")))
+    if(localdel!=null)
+    deleted=localdel
+    else deleted=[]
+    // deleted=[...deleted,props.notek]
+    if(deleted!=null&&deleted.length===21){
+      deleted.shift()
+    }
     localStorage.removeItem(props.id);
     var keys=Object.keys(localStorage)
-		var i=keys.length-1;
+		var i=keys.length-4;
     //console.log(i);
     localStorage.removeItem(i);
 		if(props.id!==0)
-		props.deleteItem(props.id);
+		{console.log(`id ${props.id}`)
+      props.deleteItem(props.id); 
+     deleted.push(props.notek)
+     localStorage.setItem(`del`,JSON.stringify(deleted))
 	//console.log(props.id);
-	};
+  }};
+   
+const sendData=()=> {
+  props.editingnotes(props.notek)
+
+}
+
 
   const [finalimage, test] = useState(props.notek.img);
   const [website, test1] = useState(props.notek.img);
  // const [post,setPost]=useState(null);
-
+// useEffect(()=>{ localStorage.setItem(`del`,null)},[])
 useEffect(()=>{
     //  axios.get("logo.clearbit.com/ko-fi.com")
     //    .then((res)=>{
@@ -105,19 +124,24 @@ useEffect(()=>{
         
          // style={{padding:'5px'}} className m5
 		<div className="m-5 " style={{}} >    
-        <Card key={props.notek.id} className="m-2 border-0 shadow halfb " id=""  style={{ 
+        <Card key={props.notek.id} className={`m-2 border-0 shadow ${props.new} halfb`} id=""  style={{ 
           //backgroundColor: '#ffffff',
     borderRadius: 45,
     padding: '4rem',width:'100%'}}>  
+     {/* <div className="dot" style={{backgroundColor:"blue",borderRadius:"50%",height:"10px",width:"10px"}}>
+            </div> */}
     {/* {4rem} */}
           <Row>
             <Col xs={12}>
               <Card.Img src={finalimage}  alt="" style={{ objectFit: 'cover',
     borderRadius: 45}} />
-            </Col></Row>
+            </Col>
+            
+            </Row>
+           
 			<Row>
             <Col>
-              <Card.Body>
+              <Card.Body onDoubleClick={sendData}>
               <Card.Title as="h1" style={{ color:"#4183BB"}} dangerouslySetInnerHTML={{'__html':props.notek.title}}></Card.Title>
               <Card.Text as="h4" dangerouslySetInnerHTML={{'__html': props.notek.description}}></Card.Text>
 				
