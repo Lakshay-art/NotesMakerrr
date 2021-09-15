@@ -72,8 +72,8 @@ const Header = (props) => {
 		document.getElementsByClassName('jumbotron')[0].classList.toggle("halfblack")
 		document.getElementsByClassName('jumbotron')[1].classList.toggle("halfblack")
 		document.getElementsByClassName('jumbotron3')[0].classList.toggle("halfblack")
-		document.getElementById('m1').classList.toggle("border")
-		document.getElementById('m1').classList.toggle("border-primary")
+		//	document.getElementById('m1').classList.toggle("border")
+		document.getElementById('m1').classList.toggle("bordercol")
 		//document.getElementsByTagName('Button')[6].classList.toggle("dark")
       for(let i=0;i<4;i++){
 		document.getElementsByClassName('slide')[i].classList.toggle("bg-secondary")
@@ -135,7 +135,7 @@ const getbackdeleted = () => {
     return (
         <div>
             <Navbar style={{  position: 'absolute' }}>
-                <Button className='slide bg-light text-secondary border-secondary shadow-sm' style={{ fontSize: '20px', position: 'fixed',top:'100px', zIndex: '102', borderRadius: "20px", outline: "none",opacity:"95%" }} onClick={ToggleSlider} >About Us</Button>
+                <Button className='slide bg-light text-secondary border-secondary shadow-sm' style={{ fontSize: '20px', position: 'fixed',top:'100px', zIndex: '103', borderRadius: "20px", outline: "none",opacity:"95%" }} onClick={ToggleSlider} >About Us</Button>
                 
                 <Button className='slide slidebtn1 bg-light text-secondary border-secondary shadow-sm' style={{ fontSize: '12px', position: 'fixed',top:'147px',left:'40px' ,zIndex: '102',padding:"5px 10px", borderRadius: "20px", outline: "none",overflowX:"hidden" ,opacity:"75%"}} onClick={dayornight} > Dark</Button>
                 <Button className='slide slidebtn2 bg-light text-secondary border-secondary shadow-sm' style={{ fontSize: '12px', position: 'fixed',overflowX:"hidden",top:'180px',left:'37px' , zIndex: '102',padding:"5px 10px", borderRadius: "20px", outline: "none",opacity:"75%" }} onClick={threeorfour} >3/four</Button>

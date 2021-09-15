@@ -77,13 +77,14 @@
 } 
 .page5 .card{
     border-radius: 20px;
-    height:400px;
+    height: 380px;
     background-color: #4183BB;
     border:none;
     overflow: hidden;
     box-shadow: 0px 0px 10px #4183BB;
     z-index:0;
     box-sizing: border-box;
+    min-width: 240px;
 }
 .circle{
     position:absolute;
@@ -237,3 +238,7 @@ overflow:hidden}
 }
 /* progress */
 /* OUM 884682847 */
+.bordercol{ 
+    border:1px solid #4183BB;
+
+}

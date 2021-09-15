@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/NotesMakerrr/static/css/main.0f33bbf0.chunk.css",
-    "main.js": "/NotesMakerrr/static/js/main.243736f4.chunk.js",
-    "main.js.map": "/NotesMakerrr/static/js/main.243736f4.chunk.js.map",
+    "main.css": "/NotesMakerrr/static/css/main.c8a39ec6.chunk.css",
+    "main.js": "/NotesMakerrr/static/js/main.0f1b0a56.chunk.js",
+    "main.js.map": "/NotesMakerrr/static/js/main.0f1b0a56.chunk.js.map",
     "runtime-main.js": "/NotesMakerrr/static/js/runtime-main.8cd84f5f.js",
     "runtime-main.js.map": "/NotesMakerrr/static/js/runtime-main.8cd84f5f.js.map",
     "static/js/2.bc4028a2.chunk.js": "/NotesMakerrr/static/js/2.bc4028a2.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.dc27753d.chunk.js": "/NotesMakerrr/static/js/3.dc27753d.chunk.js",
     "static/js/3.dc27753d.chunk.js.map": "/NotesMakerrr/static/js/3.dc27753d.chunk.js.map",
     "index.html": "/NotesMakerrr/index.html",
-    "static/css/main.0f33bbf0.chunk.css.map": "/NotesMakerrr/static/css/main.0f33bbf0.chunk.css.map",
+    "static/css/main.c8a39ec6.chunk.css.map": "/NotesMakerrr/static/css/main.c8a39ec6.chunk.css.map",
     "static/js/2.bc4028a2.chunk.js.LICENSE.txt": "/NotesMakerrr/static/js/2.bc4028a2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8cd84f5f.js",
     "static/js/2.bc4028a2.chunk.js",
-    "static/css/main.0f33bbf0.chunk.css",
-    "static/js/main.243736f4.chunk.js"
+    "static/css/main.c8a39ec6.chunk.css",
+    "static/js/main.0f1b0a56.chunk.js"
   ]
 }
