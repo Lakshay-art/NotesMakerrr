@@ -102,7 +102,7 @@ useEffect(()=>{
 
 
 	const X = () => {
-        countit((counter+1)%10)
+        countit((counter+1)%20)
 		console.log("counter"+counter)
 		props.passNote(note1);
         localStorage.setItem("count",JSON.stringify(counter))

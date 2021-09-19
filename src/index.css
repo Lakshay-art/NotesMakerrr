@@ -19,6 +19,20 @@
   
    
 }
+@media (max-width:450px) {
+    .bl{
+        display:inline !important;
+      word-wrap:unset;
+      max-width: 380px;
+     
+  
+    }
+    .m-2{
+        margin: 15px !important;
+    }
+
+}
+
 
 @media (max-width:600px) {
   .zoomout{
@@ -34,12 +48,12 @@
     }
     .bl{
         display: inline-block;
-      word-wrap: break-word;
       max-width:250px;
       /* background-color: rgb(165, 165, 165); */
     }
-    .zoomout div:nth-child(n){
-        
+    .zoomout .bl:nth-child(n){
+          display: inline-block !important;
+      word-wrap: break-word;
    /* background-color: lightcoral; */
      max-width: 300px;   
     }
@@ -61,7 +75,11 @@
       -moz-column-count: 2;
       column-count: 2;
     
-  }}
+  }
+ 
+
+  /* background-color: rgb(165, 165, 165); */
+}
 @media (min-width:800px) {
   .card-columns {
     -webkit-column-count: 3;
