@@ -1,16 +1,17 @@
 import Note from './Note';
+import { CardGroup } from 'react-bootstrap';
 
 
 const Notes = (props)=> {
     return (
-        <div className='card-columns' >
+        <CardGroup className="m-5 p-2 d-block card-columns">
             {
                 props.notes.map((note) => (
                     <Note note={note} key={note.id}></Note>
                     
                 ))
             }
-        </div>
+        </CardGroup>
     );
 }
 

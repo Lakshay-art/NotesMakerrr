@@ -46,14 +46,22 @@ const Header = (props) => {
 	},[])
 	const threeorfour = () => {
         if(document.getElementById('addednotes').classList.contains("card-columns2")){
-        document.getElementById('addednotes').classList.remove("card-columns2")
+        document.getElementsByClassName('card-columns2')[0].classList.remove("zoomout")
+		document.getElementsByClassName('card-columns')[1].classList.remove("zoomout")
+	
+		document.getElementById('addednotes').classList.remove("card-columns2")
 		document.getElementsByClassName('card-columns')[1].classList.remove("card-columns2")
+		
         // document.body.style.zoom="100%";
 	    localStorage.setItem('3or4',"false")
 	}
         else{
         document.getElementById('addednotes').classList.add("card-columns2")
 		document.getElementsByClassName('card-columns')[1].classList.add("card-columns2")
+	
+	
+		document.getElementsByClassName('card-columns2')[0].classList.add("zoomout")
+		document.getElementsByClassName('card-columns')[1].classList.add("zoomout")
         // document.body.style.zoom="80%";
 		localStorage.setItem('3or4',"true")
 		}
@@ -72,13 +80,14 @@ const Header = (props) => {
 		document.getElementsByClassName('jumbotron')[0].classList.toggle("halfblack")
 		document.getElementsByClassName('jumbotron')[1].classList.toggle("halfblack")
 		document.getElementsByClassName('jumbotron3')[0].classList.toggle("halfblack")
-		//	document.getElementById('m1').classList.toggle("border")
+	//	document.getElementById('m1').classList.toggle("border")
 		document.getElementById('m1').classList.toggle("bordercol")
 		//document.getElementsByTagName('Button')[6].classList.toggle("dark")
       for(let i=0;i<4;i++){
 		document.getElementsByClassName('slide')[i].classList.toggle("bg-secondary")
 		document.getElementsByClassName('slide')[i].classList.toggle("bg-light")
 		document.getElementsByClassName('slide')[i].classList.toggle("text-secondary")}
+		
 		document.getElementById('searchf').classList.toggle("inputbackgdark")
 		document.getElementById('titlef').classList.toggle("inputbackgdark")
 		document.getElementById('autoheight').classList.toggle("inputbackgdark")
@@ -138,7 +147,7 @@ const getbackdeleted = () => {
                 <Button className='slide bg-light text-secondary border-secondary shadow-sm' style={{ fontSize: '20px', position: 'fixed',top:'100px', zIndex: '103', borderRadius: "20px", outline: "none",opacity:"95%" }} onClick={ToggleSlider} >About Us</Button>
                 
                 <Button className='slide slidebtn1 bg-light text-secondary border-secondary shadow-sm' style={{ fontSize: '12px', position: 'fixed',top:'147px',left:'40px' ,zIndex: '102',padding:"5px 10px", borderRadius: "20px", outline: "none",overflowX:"hidden" ,opacity:"75%"}} onClick={dayornight} > Dark</Button>
-                <Button className='slide slidebtn2 bg-light text-secondary border-secondary shadow-sm' style={{ fontSize: '12px', position: 'fixed',overflowX:"hidden",top:'180px',left:'37px' , zIndex: '102',padding:"5px 10px", borderRadius: "20px", outline: "none",opacity:"75%" }} onClick={threeorfour} >3/four</Button>
+                <Button className='slide slidebtn2 bg-light text-secondary border-secondary shadow-sm' style={{ fontSize: '12px', position: 'fixed',overflowX:"hidden",top:'180px',left:'39px' , zIndex: '102',padding:"5px 10px", borderRadius: "20px", outline: "none",opacity:"75%" }} onClick={threeorfour} >Style</Button>
 				<Button className='slide slidebtn3 bg-light text-secondary border-secondary shadow-sm' style={{ fontSize: '12px', position: 'fixed',overflowX:"hidden",top:'213px',left:'27px' , zIndex: '102',padding:"5px 10px", borderRadius: "20px", outline: "none" ,opacity:"75%"}} onClick={getbackdeleted} >Get it back</Button>
                 
             </Navbar>

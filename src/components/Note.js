@@ -7,10 +7,10 @@ const Note = (props) => {
   return (
 
     <span>
-      <Container fluid >
+     
 
-        <CardGroup className="m-5 d-block ">
-
+        
+     <div className="m-5 p-2 bl" > 
           <Card key={props.note.id} className="m-2 border-0 shadow halfb" style={{
             // backgroundColor: '#ffffff',
             borderRadius: 45,
@@ -26,7 +26,7 @@ const Note = (props) => {
             <Row>
               <Col>
                 <Card.Body>
-                  <Card.Title as="h1" style={{ color: "rgb(45, 102, 173)" }}>{props.note.title}</Card.Title>
+                  <Card.Title as="h3" style={{ color: "rgb(45, 102, 173)" }}>{props.note.title}</Card.Title>
                   <Card.Text as="h4" dangerouslySetInnerHTML={{ '__html': props.note.description }}></Card.Text>
 
 
@@ -35,8 +35,8 @@ const Note = (props) => {
             </Row>
           </Card>
 
-        </CardGroup>
-      </Container>
+        
+     </div>
     </span>
 
 

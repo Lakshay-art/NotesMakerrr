@@ -146,7 +146,7 @@ useEffect(()=>{
 		<>
 
 			<Container id="m2" className="backdrop" style={{
-				display: "none", marginBottom: "0px", paddingLeft: "10px", paddingTop: "5px", paddingBottom: "0px", paddingRight: "2px", width: "90%", zIndex: "100", opacity: "100%",
+				display: "none", marginBottom: "0px", paddingLeft: "10px", paddingTop: "5px", paddingBottom: "0px", paddingRight: "2px", width: "90%", zIndex: "102", opacity: "100%",
 				position: "fixed",
 				bottom: "0",
 				left: "0%", right: '2%', borderRadius: "45px"

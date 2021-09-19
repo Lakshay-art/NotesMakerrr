@@ -7,8 +7,9 @@ var notes=[
   {
     id: 2,
     img: 'https://croatia.hr/sites/default/files/styles/image_full_width/public/2017-08/02_01_slide_nature.jpg?itok=ItAHmLlp',
-    title: 'How ',
-    description: 'Are you today?   Best of Luck!  	',
+    title: 'How to edit/dublicate a note',
+    description: 'Double click on the card you want to edit ,everthing related to that card will appear in the respective fields. Do the necessary changes and save it. Delete the previous one if no longer needed.',
+ 
   }, 
 
   {
@@ -52,7 +53,13 @@ var notes=[
     title: 'About Us',
     description: 'Get to know us on social platforms',
   },
-
+  {
+    id: 10,
+    img: 'https://croatia.hr/sites/default/files/styles/image_full_width/public/2017-08/02_01_slide_nature.jpg?itok=ItAHmLlp',
+    title: 'How to edit/dublicate a note',
+    description: 'Double click on the card you want to edit ,everthing related to that card will appear in the respective fields. Do the necessary changes and save it. Delete the previous one if no longer needed.',
+ 
+  }, 
   {
     id: 8,
     img: 'https://croatia.hr/sites/default/files/styles/image_full_width/public/2017-08/02_01_slide_nature.jpg?itok=ItAHmLlp',

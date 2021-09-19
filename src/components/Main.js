@@ -118,7 +118,11 @@ const setdeletednote = (deletednote)=>{
 		return [...prevData, deletednote];
 	});
 }
-
+// const[height,setheight]=useState(0)
+// useEffect(() => {
+// 	var a=document.getElementById('addednotes').clientHeight+50;
+// 	setheight(a);
+// }, [addItem])
 
 	return (<>
 	     {/* <div class="flex"> */}
@@ -126,7 +130,7 @@ const setdeletednote = (deletednote)=>{
 	    <Button className='bg-light text-primary border-primary shadow-sm' style={{borderRadius:'25px', outline: "none" }} >threeorfour</Button>
                </div>  */}
 			   
-		<Jumbotron id="searchj" style={{ width:"30%", padding: "4px", margin: "auto",marginBottom:"20px", borderRadius: "30px", position: "relative", zIndex: "1",minWidth:"150px" }}>
+		<Jumbotron id="searchj" style={{ width:"30%", padding: "4px", margin: "auto",marginBottom:"20px", borderRadius: "30px", position: "relative", zIndex: "101",minWidth:"150px"  }}>
 			<Form inline className='w-50 mx-auto' >
 				<FormControl id="searchf" type='text' placeholder='search..' href="#" className='w-100 ' style={{ borderRadius: "25px" }} onChange={(e) => setSearchTerm(e.target.value)}></FormControl>
 				<Button type='submit' className='invisible'></Button>
@@ -146,13 +150,15 @@ const setdeletednote = (deletednote)=>{
 				<Slider></Slider>
 			</div>
 
-			<div className='Slider2 h-200' style={{ position: 'fixed', width: '0', overflowX: 'hidden', zIndex: '101', bottom: '95px', right: '5px', height: '67%', borderRadius: '35px', margin: "5px" }}>
+			<div className='Slider2 h-200' style={{ position: 'fixed', width: '0', overflowX: 'hidden', zIndex: '101', bottom: '95px', right: '5px', height: '67%', borderRadius: '35px', margin: "0px" }}>
 				<Slider2></Slider2>
 			</div>
 
 			<Container fluid id="goto">
 
-				<CardGroup className="m-5 d-block card-columns " id="addednotes">
+				<CardGroup className=" p-2 d-block card-columns " id="addednotes" 
+//	style={{minHeight:`${height}px`}}
+				>
 					{addItem.filter((val) => {
 						if (searchTerm === "") {
 							return val
@@ -233,10 +239,14 @@ const setdeletednote = (deletednote)=>{
 
 			</div>
 
-
+<hr style={{margin:"1px",backgroundColor:"#4183BB"}}></hr>
 			<div onClick={G3}>
 				<div className='notes' style={{ position: 'relative' }} >
+				<Container fluid >
+				
 					<Notes notes={props.notes} sendData={searchTerm}  ></Notes>
+					
+					</Container>
 				</div>
 			</div>
 

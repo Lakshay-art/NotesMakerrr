@@ -123,11 +123,11 @@ useEffect(()=>{
         return (
         
          // style={{padding:'5px'}} className m5
-		<div className="m-5 p-2 " style={{}} >    
-        <Card key={props.notek.id} className={`m-2 border-0 shadow ${props.new} halfb`} id=""  style={{ 
+		<div className="m-5 p-2 bl " >    
+        <Card key={props.notek.id} className={`m-2 border-0 shadow ${props.new} halfb `} id=""  style={{ 
           //backgroundColor: '#ffffff',
     borderRadius: 45,
-    padding: '4rem',width:'100%'}}>  
+    padding: '4rem',height:'100%'}} onDoubleClick={sendData}>  
      {/* <div className="dot" style={{backgroundColor:"blue",borderRadius:"50%",height:"10px",width:"10px"}}>
             </div> */}
     {/* {4rem} */}
@@ -141,8 +141,8 @@ useEffect(()=>{
            
 			<Row>
             <Col>
-              <Card.Body onDoubleClick={sendData}>
-              <Card.Title as="h1" style={{ color:"#4183BB"}} dangerouslySetInnerHTML={{'__html':props.notek.title}}></Card.Title>
+              <Card.Body >
+              <Card.Title as="h3" style={{ color:"#4183BB",display:"inline",boxSizing:"content-box"}} dangerouslySetInnerHTML={{'__html':props.notek.title}}></Card.Title>
               <Card.Text as="h4" dangerouslySetInnerHTML={{'__html': props.notek.description}}></Card.Text>
 				
               </Card.Body><Button id="link" variant="link" className="border border-secondary" style={{borderRadius:"25px"}}>

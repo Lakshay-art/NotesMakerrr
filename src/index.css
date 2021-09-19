@@ -14,17 +14,59 @@
        font-size: 10px;
    }
    .m-5{
-       margin: 15px !important;
-   }
+       margin:15px !important;
+   } 
+  
    
 }
 
+@media (max-width:600px) {
+  .zoomout{
+      /* min-height:3000px; */
+    /* -moz-transform: scale(0.8, 0.8);  */
+    /* zoom: 0.8;  */
+    zoom: 50%;
+    -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+      
+      
+    }
+    .bl{
+        display: inline-block;
+      word-wrap: break-word;
+      max-width:250px;
+      /* background-color: rgb(165, 165, 165); */
+    }
+    .zoomout div:nth-child(n){
+        
+   /* background-color: lightcoral; */
+     max-width: 300px;   
+    }
+    .b2{
+        /* display: inline-block;
+      word-wrap: break-word;
+      max-width:500px; */
+    }
 
-@media (min-width: 34em) {
-  .card-columns {
+    
+
+ /* .card-columns{
+    min-height:3000px;
+      } */
+  }
+  @media (min-width: 500px) {
+    .card-columns {
       -webkit-column-count: 2;
       -moz-column-count: 2;
       column-count: 2;
+    
+  }}
+@media (min-width:800px) {
+  .card-columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
 
 }
 /* body{
@@ -34,7 +76,7 @@
     width:50%
 } */
 }
-@media (min-width: 48em) {
+@media (min-width: 1036px) {
   
 .card-columns {
     -webkit-column-count: 3;
@@ -46,8 +88,11 @@
     -webkit-column-count: 4;
     -moz-column-count: 4;
     column-count: 4;
+    margin:0px !important;
+    
     
 }
+
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 *{
@@ -74,17 +119,19 @@
 .page5 .container{
     max-width:300px;
     border-radius: 20px;
+   
 } 
 .page5 .card{
     border-radius: 20px;
-    height: 380px;
+    height:380px;
     background-color: #4183BB;
     border:none;
     overflow: hidden;
     box-shadow: 0px 0px 10px #4183BB;
     z-index:0;
     box-sizing: border-box;
-    min-width: 240px;
+     min-width: 240px;
+    
 }
 .circle{
     position:absolute;
@@ -132,7 +179,7 @@ overflow:hidden}
     color:rgb(10, 8, 8);
 }
 .page5 .button{
-    width:250px;
+    width:220px;
     border-radius: 25px;
     background-color:#4183BB;
     color:#fff;
