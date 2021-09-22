@@ -60,7 +60,7 @@
     
 
     <div class="navflexj">
-	 <button onclick="()=>ev.propmt()" type="button-link" class="btn btn-secondary download rounded-pill" style="border:2px solid #4183BB; padding:5px 25px 5px 25px;"> Download!! </button>
+	 <button  type="button-link" class="btn btn-secondary download rounded-pill" style="border:2px solid #4183BB; padding:5px 25px 5px 25px;outline: none;"> Download!! </button>
 	  <button id="ff" type="button" class="btn btn-secondary btn-sm ml-auto">
           <span  class="glyphicon glyphicon-user "></span>
         </button>
@@ -68,14 +68,6 @@
    </div>
 </nav>
 
-<script>
-  window.addEventListener("beforeinstallprompt",ev =>{
-    ev.preventDefault();
-   // var download=document.getElementsByClassName("download")[0];
- 
-  })
-
-</script>
 
 
 
@@ -113,6 +105,12 @@ var top = 0;
 myWindow=window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no , toolbar=no, scrollbars=no,  copyhistory=no, width='+w+', height='+h+', top='+top+', left=0');
 myWindow.moveTo(0,515);
 }
+window.addEventListener("beforeinstallprompt",ev =>{
+    ev.preventDefault();
+   var download=document.getElementsByClassName("download")[0];
+    download.onclick=()=> ev.propmt();
+    $('.download').click=()=>ev.propmt();
+  })
 
 
 </script>
