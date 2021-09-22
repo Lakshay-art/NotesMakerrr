@@ -46,12 +46,6 @@ var notes=[
     description: 'Click on Take Notes to input your note',
   },
 
-  {
-    id: 6,
-    img: 'All Notes.png',
-    title: 'All Notes',
-    description: 'Takes you to the notes',
-  }, 
 
   {
     id: 7,
