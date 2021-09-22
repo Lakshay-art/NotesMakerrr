@@ -105,15 +105,7 @@ var top = 0;
 myWindow=window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no , toolbar=no, scrollbars=no,  copyhistory=no, width='+w+', height='+h+', top='+top+', left=0');
 myWindow.moveTo(0,515);
 }
-let hhh;
-window.addEventListener('beforeinstallprompt',function(e){
-    e.preventDefault();
-    hhh=e;
-  
-  console.log("befire")
 
-  })
-   $('.download').click((e)=>hhh.prompt());
 
 </script>
 
@@ -142,7 +134,17 @@ else
  $('#root .Slider2').animate({width: 300}, 700);});
 </script> 
    
-   
+   <script>
+     let hhh;
+window.addEventListener('beforeinstallprompt',function(e){
+    e.preventDefault();
+    hhh=e;
+  
+  console.log("befire")
+
+  });
+   $('.download').click((e)=>hhh.prompt());
+   </script>
    
    
    
