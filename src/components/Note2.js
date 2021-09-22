@@ -95,7 +95,7 @@ const Note2 = (props) => {
       return a;
     });
     props.notek.img = finalimage;
-    if (props.notek.title != "Open") {
+    if (props.notek.title != "Advertisement") {
       if(props.searchterm === "")
       localStorage.setItem(props.id, JSON.stringify(props.notek));
     }
