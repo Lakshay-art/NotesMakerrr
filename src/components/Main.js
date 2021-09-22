@@ -12,9 +12,9 @@ import $ from 'jquery';
 const Main = (props) => {
 	const [addItem, setAddItem] = useState([{
 		id: 0,
-		img: 'Open.png',
-		title: 'Open',
-		description: 'Visit the Website or Page',
+		img: 'minion two.png',
+		title: 'Advertisement',
+		description: 'This is demo Ad',
 	},
 	// {id: 0,
 	// 	img: 'Open.png',

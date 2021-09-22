@@ -18,6 +18,12 @@ var notes=[
     title: ':)',
     description: 'Hello',
   }, 
+  {
+    id: 11,
+    img: 'Style.png',
+    title: 'Change the way the app looks!!',
+    description: 'Click on style button change view according to your prefrence',
+  }, 
 
   {
     id: 3,
@@ -55,9 +61,9 @@ var notes=[
   },
   {
     id: 10,
-    img: 'https://croatia.hr/sites/default/files/styles/image_full_width/public/2017-08/02_01_slide_nature.jpg?itok=ItAHmLlp',
-    title: 'How to edit/dublicate a note',
-    description: 'Double click on the card you want to edit ,everthing related to that card will appear in the respective fields. Do the necessary changes and save it. Delete the previous one if no longer needed.',
+    img: 'GetItBack.png',
+    title: 'How to get a accidently deleted note back',
+    description: 'Just click on "Get it back" button to get upto last 20 deleted notes',
  
   }, 
   {
