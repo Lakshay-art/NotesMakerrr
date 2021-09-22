@@ -172,7 +172,7 @@ const setdeletednote = (deletednote)=>{
 						
                           if(index<addItem.length-1)
 						return (
-							<Note2 style={{ position: 'relative' }} editingnotes={editingnotes} notek={val} key={index} img={val.img} id={index} count={val.c} new="" deleteItem={onDelete}>
+							<Note2 style={{ position: 'relative' }}searchterm={searchTerm}  editingnotes={editingnotes} notek={val} key={index} img={val.img} id={index} count={val.c} new="" deleteItem={onDelete}>
                             {/* {console.log("i worked")} */}
 							{/* {console.log("^")} */}
 							{/* {         (val.title!="Open")&&
@@ -183,7 +183,7 @@ const setdeletednote = (deletednote)=>{
 						);
 						else{
 							return (
-								<Note2 style={{ position: 'relative' }} editingnotes={editingnotes} notek={val} key={index} img={val.img} id={index} count={val.c} new="shadowblue" deleteItem={onDelete}>
+								<Note2 style={{ position: 'relative' }}searchterm={searchTerm}  editingnotes={editingnotes} notek={val} key={index} img={val.img} id={index} count={val.c} new="shadowblue" deleteItem={onDelete}>
 								{/* {console.log("i worked")} */}
 								{/* {console.log("^")} */}
 								{/* {         (val.title!="Open")&&
