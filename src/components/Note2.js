@@ -47,6 +47,9 @@ const Note2 = (props) => {
     test1((img) => {
       var f = props.img;
       if (f.length === 0) return `${props.count}.png`;
+      if (f.includes("youtu.be")) {
+        return f;
+      }
       if (!f.includes("/www.") && !f.includes(".png")) {
         f = `www.${f}`;
       }
