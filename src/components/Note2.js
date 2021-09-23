@@ -74,6 +74,10 @@ const Note2 = (props) => {
         k = k.split(".com")[0];
         k = `${k}.com`;
       }
+      if(k.includes("://"))
+   {k=k.split("://www.")[1]
+  }
+  
 
       if (a.slice(a.length - 3, a.length) !== "png") {
         k = `http://logo.clearbit.com/${k}?size=101`;
@@ -99,7 +103,7 @@ const Note2 = (props) => {
 
       return a;
     });
-    props.notek.img = finalimage;
+    // props.notek.img = finalimage;
     if (props.notek.title != "Advertisement") {
       if(props.searchterm === "")
       localStorage.setItem(props.id, JSON.stringify(props.notek));

@@ -7,6 +7,7 @@ const Note = (props) => {
       <div className="m-5 p-2 bl">
         <Card
           key={props.note.id}
+          target="_blank"
           className="m-2 border-0 shadow halfb"
           style={{
             // backgroundColor: '#ffffff',

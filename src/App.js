@@ -45,7 +45,12 @@ var notes=[
     title: 'Take Notes',
     description: 'Click on Take Notes to input your note',
   },
-
+  {
+    id: 12,
+    img: 'http://logo.clearbit.com/clearbit.com?size=101',
+    title: 'Clear Bit Logos',
+    description: '<a href="https://clearbit.com">Logos provided by Clearbit</a>',
+  },
 
   {
     id: 7,
