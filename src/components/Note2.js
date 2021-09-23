@@ -60,6 +60,8 @@ const Note2 = (props) => {
       var a = props.img;
       //console.log(props.count)
       if (a.length === 0) return `${props.count}.png`;
+      if(a.slice(a.length-4,a.length)=="=101")
+  return a;
       var k = a;
       if (k.includes("youtu.be")) {
         k = "youtube.com";
