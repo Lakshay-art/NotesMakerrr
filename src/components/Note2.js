@@ -31,7 +31,7 @@ const Note2 = (props) => {
   const sendData = () => {
     props.editingnotes(props.notek);
   };
-
+  const [description, setdis] = useState(props.notek.description);
   const [finalimage, test] = useState(props.notek.img);
   const [website, test1] = useState(props.notek.img);
   // const [post,setPost]=useState(null);
@@ -43,17 +43,32 @@ const Note2 = (props) => {
     //    console.log("ppp")
     //  });
     //const testImage=(img,id)=> {
+      setdis((description) => {
+      var g=props.notek.description;
+      if((g.includes('<')||g.includes('>'))&&props.id!=0){
+        
+        g=g.replaceAll('<','&lt;')
+        console.log(g);
+        g=`<code>${g}</code>`
+        return g
+      }
+     
+      return g;
+
+      })
 
     test1((img) => {
       var f = props.img;
       if (f.length === 0) return `${props.count}.png`;
+      // if(!f.includes(".png")&&f.includes("https://")&&f.includes("/www.")&&f.slice(f.length-3,f.length)==".com")
+      // return f;
       if (f.includes("youtu.be")) {
         return f;
       }
       if (!f.includes("/www.") && !f.includes(".png")) {
         f = `www.${f}`;
       }
-      if (!f.includes("http:") && !f.includes(".png")) {
+      if (!f.includes("http") && !f.includes(".png")) {
         f = `https://${f}`;
       }
       return f;
@@ -63,8 +78,8 @@ const Note2 = (props) => {
       var a = props.img;
       //console.log(props.count)
       if (a.length === 0) return `${props.count}.png`;
-      if(a.slice(a.length-4,a.length)=="=101")
-  return a;
+      // if(a.slice(a.length-4,a.length)=="=101")
+      // return a;
       var k = a;
       if (k.includes("youtu.be")) {
         k = "youtube.com";
@@ -74,10 +89,9 @@ const Note2 = (props) => {
         k = k.split(".com")[0];
         k = `${k}.com`;
       }
-      if(k.includes("://"))
-   {k=k.split("://www.")[1]
-  }
-  
+      if (k.includes("://")) {
+        k = k.split("://www.")[1];
+      }
 
       if (a.slice(a.length - 3, a.length) !== "png") {
         k = `http://logo.clearbit.com/${k}?size=101`;
@@ -95,6 +109,7 @@ const Note2 = (props) => {
           // console.log(k.slice(0,h))
         }
         k = k.slice(0, h);
+        //   console.log(k);
         return k;
       }
       // console.log(post.icons[0].src);
@@ -103,10 +118,10 @@ const Note2 = (props) => {
 
       return a;
     });
-    // props.notek.img = finalimage;
-    if (props.notek.title != "Advertisement") {
-      if(props.searchterm === "")
-      localStorage.setItem(props.id, JSON.stringify(props.notek));
+    // props.notek.img=finalimage;
+    if (props.notek.title != "Open") {
+      if (props.searchterm === "")
+        localStorage.setItem(props.id, JSON.stringify(props.notek));
     }
   });
   // }
@@ -116,7 +131,7 @@ const Note2 = (props) => {
 
   return (
     // style={{padding:'5px'}} className m5
-    <div className="m-5 p-2 bl ">
+    <div className="m-5 p-2 bl " style={{ margin: "auto" }}>
       <Card
         key={props.notek.id}
         className={`m-2 border-0 shadow ${props.new} halfb `}
@@ -145,6 +160,7 @@ const Note2 = (props) => {
         <Row>
           <Col>
             <Card.Body>
+              
               <Card.Title
                 as="h3"
                 style={{
@@ -154,9 +170,12 @@ const Note2 = (props) => {
                 }}
                 dangerouslySetInnerHTML={{ __html: props.notek.title }}
               ></Card.Title>
+              
+              
               <Card.Text
                 as="h4"
-                dangerouslySetInnerHTML={{ __html: props.notek.description }}
+                
+                dangerouslySetInnerHTML={{__html: description} }
               ></Card.Text>
             </Card.Body>
             <Button
