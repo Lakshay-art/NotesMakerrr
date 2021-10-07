@@ -68,7 +68,7 @@ const Note2 = (props) => {
       if (!f.includes("/www.") && !f.includes(".png")) {
         f = `www.${f}`;
       }
-      if (!f.includes("http") && !f.includes(".png")) {
+      if (!f.includes("http:") && !f.includes(".png")) {
         f = `https://${f}`;
       }
       return f;
@@ -78,8 +78,10 @@ const Note2 = (props) => {
       var a = props.img;
       //console.log(props.count)
       if (a.length === 0) return `${props.count}.png`;
-      // if(a.slice(a.length-4,a.length)=="=101")
-      // return a;
+      if(a.length>60)
+      return a;
+       if(a.slice(a.length-4,a.length)=="=101")
+       return a;
       var k = a;
       if (k.includes("youtu.be")) {
         k = "youtube.com";
@@ -119,7 +121,7 @@ const Note2 = (props) => {
       return a;
     });
     // props.notek.img=finalimage;
-    if (props.notek.title != "Open") {
+    if (props.id != "0") {
       if (props.searchterm === "")
         localStorage.setItem(props.id, JSON.stringify(props.notek));
     }
@@ -131,7 +133,7 @@ const Note2 = (props) => {
 
   return (
     // style={{padding:'5px'}} className m5
-    <div className="m-5 p-2 bl " style={{ margin: "auto" }}>
+    <div className="m-5 p-2 bl " >
       <Card
         key={props.notek.id}
         className={`m-2 border-0 shadow ${props.new} halfb `}
