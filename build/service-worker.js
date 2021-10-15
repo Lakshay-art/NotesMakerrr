@@ -1,4 +1,6 @@
-self.addEventListener('fetch', function(event) {});'use strict';
+'use strict';
+self.addEventListener('fetch', function(event) {}); 
+
 
 // Licensed under a CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
 // http://creativecommons.org/publicdomain/zero/1.0/
@@ -52,7 +54,7 @@ self.addEventListener('fetch', function(event) {});'use strict';
             event.respondWith(
                 fetch(request)
                     .catch(function () {
-                        return caches.match('/offline.html');
+                        return caches.match('/index.html');
                     })
             );
             return;
@@ -84,7 +86,7 @@ self.addEventListener('fetch', function(event) {});'use strict';
                     .catch(function () {
                         return caches.match(request)
                             .then(function (response) {
-                                return response || caches.match('/offline.html');
+                                return response || caches.match('/index.html');
                             })
                     })
             );
