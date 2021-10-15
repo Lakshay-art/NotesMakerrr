@@ -65,9 +65,10 @@
 
     <div class="navflexj">
 	 <button  type="button-link" class="btn btn-secondary download rounded-pill" style="border:2px solid #4183BB; padding:5px 25px 5px 25px;outline: none;"> Download!! </button>
-	  <button id="ff" type="button" class="btn btn-secondary btn-sm ml-auto">
-          <span  class="glyphicon glyphicon-user "></span>
-        </button>
+	 <button id="ff" type="button" class="btn btn-secondary btn-sm rounded-pill ml-auto" style="padding: 3px 5px;" >
+         
+    <!-- <span  class="glyphicon glyphicon-user "></span> -->
+  </button>
         
    </div>
 </nav>
@@ -132,10 +133,14 @@ myWindow.moveTo(0,515);
    
 <script>
 $('#ff').click(function(){
- if ($('.Slider2').width()>0){
-            $('.Slider2').animate({width: '0px'}, 500);}
-else
- $('#root .Slider2').animate({width: 300}, 700);});
+//  if ($('.Slider2').width()>0){
+//             $('.Slider2').animate({width: '0px'}, 500);}
+// else
+//  $('#root .Slider2').animate({width: 300}, 700);
+$('#useName').animate({left:"25%"}, 800);
+
+});
+
 </script> 
    
    <script>

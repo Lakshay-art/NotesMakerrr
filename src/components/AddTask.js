@@ -61,6 +61,13 @@ const [counter,countit]=useState(JSON.parse(localStorage.getItem("count"))||0);
 	}
 useEffect(()=>{
 	var currnote=JSON.parse(localStorage.getItem("current"))
+	if(currnote==null)
+	currnote={
+		title: "",
+		description: "",
+		img: "",
+		c :1
+	}
 	setNote({
 			title: props.premade.title||currnote.title||"",
 			description: props.premade.description||currnote.description||"",

@@ -1,6 +1,7 @@
 import './App.css';
 
 import Main from './components/Main';
+import UseRefuseEffect from './components/UseRefuseEffect';
 // import 'bootstrap/dist/bootstrap.min.css';
 
 var notes=[
@@ -91,6 +92,7 @@ function App() {
       <Main id="main" notes={notes}>
 		
 	  </Main>
+    <UseRefuseEffect/>
     </div>
   );
 }

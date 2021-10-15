@@ -80,7 +80,9 @@ const Header = (props) => {
 		document.getElementsByClassName('jumbotron')[0].classList.toggle("halfblack")
 		document.getElementsByClassName('jumbotron')[1].classList.toggle("halfblack")
 		document.getElementsByClassName('jumbotron3')[0].classList.toggle("halfblack")
-	//	document.getElementById('m1').classList.toggle("border")
+		document.getElementById('useName').classList.toggle("halfblack")
+	
+		//	document.getElementById('m1').classList.toggle("border")
 		document.getElementById('m1').classList.toggle("bordercol")
 		//document.getElementsByTagName('Button')[6].classList.toggle("dark")
       for(let i=0;i<4;i++){
@@ -88,7 +90,8 @@ const Header = (props) => {
 		document.getElementsByClassName('slide')[i].classList.toggle("bg-light")
 		document.getElementsByClassName('slide')[i].classList.toggle("text-secondary")}
 		
-		document.getElementById('searchf').classList.toggle("inputbackgdark")
+		document.getElementById('namef').classList.toggle("inputbackgdark")
+	    document.getElementById('searchf').classList.toggle("inputbackgdark")
 		document.getElementById('titlef').classList.toggle("inputbackgdark")
 		document.getElementById('autoheight').classList.toggle("inputbackgdark")
 		document.getElementById('imgf').classList.toggle("inputbackgdark")

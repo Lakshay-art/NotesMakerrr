@@ -52,7 +52,7 @@ const Main = (props) => {
 		var i=keys.length;
         while(i--){
 			//console.log("type"+typeof(keys[i]))
-		if(typeof(JSON.parse(localStorage.getItem(keys[i])))=="object"&&keys[i]!=="del"&&keys[i]!=="isDark"&&keys[i]!=="3or4"&&keys[i]!=="current")
+		if(typeof(JSON.parse(localStorage.getItem(keys[i])))=="object"&&keys[i]!=="del"&&keys[i]!=="isDark"&&keys[i]!=="3or4"&&keys[i]!=="current"&&keys[i]!=="name")
         values.push(JSON.parse(localStorage.getItem(keys[i])))}
 		//return [];
 	//	console.log(JSON.parse(localStorage.getItem(keys[0])))
@@ -62,6 +62,7 @@ const Main = (props) => {
 		 var threeorfour=localStorage.getItem('3or4');
 		 var dele=localStorage.getItem('del');
 		 var currentnote=localStorage.getItem('current');
+		 var name=localStorage.getItem('name');
 		 if(values.length!==0) 
 		 localStorage.clear(); 
 		 console.log(values)
@@ -76,7 +77,8 @@ const Main = (props) => {
 		  localStorage.setItem('3or4',threeorfour);
 		  localStorage.setItem('del',dele);
 		  localStorage.setItem('current',currentnote);
-		 return [...prevData,...values];
+		  localStorage.setItem('name',name);
+		return [...prevData,...values];
 	});
 	
 	// if(values.length==0){
@@ -183,7 +185,7 @@ const setdeletednote = (deletednote)=>{
 						);
 						else{
 							return (
-								<Note2 style={{ position: 'relative' }}searchterm={searchTerm}  editingnotes={editingnotes} notek={val} key={index} img={val.img} id={index} count={val.c} new="shadowblue" deleteItem={onDelete}>
+								<Note2 style={{ position: 'relative' }} searchterm={searchTerm}  editingnotes={editingnotes} notek={val} key={index} img={val.img} id={index} count={val.c} new="shadowblue" deleteItem={onDelete}>
 								{/* {console.log("i worked")} */}
 								{/* {console.log("^")} */}
 								{/* {         (val.title!="Open")&&
