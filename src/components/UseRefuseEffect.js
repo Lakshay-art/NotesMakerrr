@@ -38,7 +38,7 @@ export default function UseRefuseEffect() {
         }).then((res)=>{
             console.log(res.data)
         },(err)=>{
-            alert("Error while sending data")
+            //alert("Error while sending data")
             console.log(err)
         })
     }
