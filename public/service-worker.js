@@ -5,7 +5,7 @@ self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open('NotesMakerrr').then(function(cache) {
      return cache.addAll([
-       '/',
+       '/NotesMakerrr/',
      "/NotesMakerrr/static/css/main.c366c98a.chunk.css",
      "/NotesMakerrr/static/js/main.294c5495.chunk.js",
      "/NotesMakerrr/static/js/main.294c5495.chunk.js.map",
