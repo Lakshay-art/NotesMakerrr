@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import {Jumbotron,Button,FormControl,Form,Row,Col} from 'react-bootstrap'
 // import Propsreciever from './Propsreciever'
+import axios from 'axios'
 import $ from 'jquery'
 
 export default function UseRefuseEffect() {
@@ -30,6 +31,16 @@ export default function UseRefuseEffect() {
         setstate(cityRef.current.value.slice(0,2).toUpperCase())
         localStorage.setItem("name",JSON.stringify(cityRef.current.value.slice(0,2).toUpperCase()))}
         HideName();
+        axios.post("http://localhost:8000/user/userdata",{
+            uname:cityRef.current.value,
+            upassword:" "
+            
+        }).then((res)=>{
+            console.log(res.data)
+        },(err)=>{
+            alert("Error while sending data")
+            console.log(err)
+        })
     }
     const HideName = ()=>{
       //  $('#useName').animate({left:"20%"}, 100);
