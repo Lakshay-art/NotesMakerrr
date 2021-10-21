@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/NotesMakerrr/static/css/main.c366c98a.chunk.css",
-    "main.js": "/NotesMakerrr/static/js/main.70e0dbb7.chunk.js",
-    "main.js.map": "/NotesMakerrr/static/js/main.70e0dbb7.chunk.js.map",
+    "main.js": "/NotesMakerrr/static/js/main.6c19a00c.chunk.js",
+    "main.js.map": "/NotesMakerrr/static/js/main.6c19a00c.chunk.js.map",
     "runtime-main.js": "/NotesMakerrr/static/js/runtime-main.9d317432.js",
     "runtime-main.js.map": "/NotesMakerrr/static/js/runtime-main.9d317432.js.map",
     "static/js/2.0405f225.chunk.js": "/NotesMakerrr/static/js/2.0405f225.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.9d317432.js",
     "static/js/2.0405f225.chunk.js",
     "static/css/main.c366c98a.chunk.css",
-    "static/js/main.70e0dbb7.chunk.js"
+    "static/js/main.6c19a00c.chunk.js"
   ]
 }
