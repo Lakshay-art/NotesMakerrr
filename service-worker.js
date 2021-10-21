@@ -9,10 +9,10 @@ self.addEventListener('install', function(e) {
        '/index.html',
        '/index.html?homescreen=1',
        '/?homescreen=1',
-       "/static/js/runtime-main.9d317432.js",
-       "/static/js/2.0405f225.chunk.js",
-       "/static/css/main.c366c98a.chunk.css",
-       "/static/js/main.294c5495.chunk.js"
+       "static/js/runtime-main.9d317432.js",
+       "static/js/2.0405f225.chunk.js",
+       "static/css/main.c366c98a.chunk.css",
+       "static/js/main.294c5495.chunk.js"
     
      ]);
    })
