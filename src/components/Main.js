@@ -12,7 +12,7 @@ import $ from 'jquery';
 const Main = (props) => {
 	const [addItem, setAddItem] = useState([{
 		id: 0,
-		img: 'superman.jpg',
+		img: 'superman.png',
 		title: 'SuperMan Filter',
 		description: '<p>Try this SuperMan Filter on Instagram</p> <a style="text-align:center" href="https://www.instagram.com/ar/192401956234724/"><b>Try Now</b></a>',
 	},
