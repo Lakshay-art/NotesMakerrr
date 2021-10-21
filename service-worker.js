@@ -1,4 +1,4 @@
-importScripts('/cache-polyfill.js');
+importScripts('NotesMakerrr/cache-polyfill.js');
 
 
 self.addEventListener('install', function(e) {
