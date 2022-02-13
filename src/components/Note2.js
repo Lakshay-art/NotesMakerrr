@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Card, Row, Col } from "react-bootstrap";
-//import axios from 'axios'
+
 
 var deleted = [];
 
@@ -19,7 +19,7 @@ const Note2 = (props) => {
     var i = keys.length - 3;
     //console.log(i);
     localStorage.removeItem(i);
-    if (props.id !== 0) {
+    if (props.id !== 0 && props.id!=1 &&props.id!=2) {
       console.log(`id ${props.id}`);
       props.deleteItem(props.id);
       deleted.push(props.notek);
