@@ -16,7 +16,7 @@ const Note2 = (props) => {
     }
     localStorage.removeItem(props.id);
     var keys = Object.keys(localStorage);
-    var i = keys.length - 4;
+    var i = keys.length - 3;
     //console.log(i);
     localStorage.removeItem(i);
     if (props.id !== 0) {
@@ -45,7 +45,7 @@ const Note2 = (props) => {
     //const testImage=(img,id)=> {
       setdis((description) => {
       var g=props.notek.description;
-      if((g.includes('<')||g.includes('>'))&&props.id!=0){
+      if((g.includes('<')||g.includes('>'))&&props.id!=0 && props.id!=1 &&props.id!=2){
         
         g=g.replaceAll('<','&lt;')
         console.log(g);
@@ -121,7 +121,7 @@ const Note2 = (props) => {
       return a;
     });
     // props.notek.img=finalimage;
-    if (props.id != "0") {
+    if (props.id != "0" && props.id != "1" && props.id != "2" ) {
       if (props.searchterm === "")
         localStorage.setItem(props.id, JSON.stringify(props.notek));
     }

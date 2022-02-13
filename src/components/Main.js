@@ -10,16 +10,22 @@ import $ from 'jquery';
 
 
 const Main = (props) => {
-	const [addItem, setAddItem] = useState([{
-		id: 0,
-		img: 'superman.png',
-		title: 'SuperMan Filter',
-		description: '<p>Try this SuperMan Filter on Instagram</p> <a style="text-align:center" href="https://www.instagram.com/ar/192401956234724/"><b>Try Now</b></a>',
-	},
-	// {id: 0,
-	// 	img: 'Open.png',
-	// 	title: 'Open',
-	// 	description: 'Visit the Website or Page'},
+	const [addItem, setAddItem] = useState([
+	{id: 1,
+		img: '23A.png',
+		title: '23A',
+		description: '<a href="https://zoom.us/meeting/register/tJ0uf-qurzsjEtzI4E5griWOhDTqY3X-UiFl">CN</a></br><a href="https://zoom.us/meeting/register/tJAtcuisqjgtHddPwIL5WPMtVJO-bfiaT-3n">CSA</a></br><a href="https://zoom.us/meeting/register/tJAtcuisqjgtHddPwIL5WPMtVJO-bfiaT-3n">OOSE</a></br></br><p>Attendance</p><a href="https://www.google.com/url?q=https://docs.google.com/forms/d/e/1FAIpQLSeynzTsbO82GZ8a7yYztw9PRxLUQdajkVRKR7isU77WnhfS8w/viewform?vc%3D0%26c%3D0%26w%3D1%26flr%3D0%26usp%3Dmail_form_link&source=gmail-imap&ust=1644308916000000&usg=AOvVaw33-JX9cRd3kHVm273hTQPO">CSA</a></br><a href="https://www.google.com/url?q=https://docs.google.com/forms/d/e/1FAIpQLSfCnzqm92JMUQQqHWWcOZiFSSV1N1sQ3co_k8YIdc-hzLJv8g/viewform?usp%3Dsf_link&source=gmail-imap&ust=1644247867000000&usg=AOvVaw3pg3KkKQMihmNk3LIQXMLS">CN</a>'},
+    {id: 1,
+			img: '23B.png',
+			title: '23B',
+			description: '<a href="https://zoom.us/meeting/register/tJclfuCoqTIvH9Qh7qPDvez1CRIZscIxYEkc">CN</a></br><a href="https://zoom.us/meeting/register/tJAtcuisqjgtHddPwIL5WPMtVJO-bfiaT-3n">CSA</a></br><a href="https://zoom.us/meeting/register/tJAtcuisqjgtHddPwIL5WPMtVJO-bfiaT-3n">OOSE</a></br></br><p>Attendance</p><a href="https://www.google.com/url?q=https://docs.google.com/forms/d/e/1FAIpQLSeynzTsbO82GZ8a7yYztw9PRxLUQdajkVRKR7isU77WnhfS8w/viewform?vc%3D0%26c%3D0%26w%3D1%26flr%3D0%26usp%3Dmail_form_link&source=gmail-imap&ust=1644308916000000&usg=AOvVaw33-JX9cRd3kHVm273hTQPO">CSA</a>'},
+
+			{
+				id: 0,
+				img: 'superman.png',
+				title: 'SuperMan Filter',
+				description: '<p>Try this SuperMan Filter on Instagram</p> <a style="text-align:center" href="https://www.instagram.com/ar/192401956234724/"><b>Try Now</b></a>',
+			},
 	]);
     
 	
